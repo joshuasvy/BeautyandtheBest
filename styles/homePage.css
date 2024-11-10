@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Inter;
+}
+header{
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 16px 0px;
+    box-shadow: 0 5px 60px rgba(0, 0, 0, 0.50);
+    position: relative;
+    z-index: 1000;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    margin-left: 63.5px;
+}
+.logo img {
+    height: 85px;
+    margin-right: 10px;
+}
+.brandName {
+    font-family: Italiana;
+    font-size: 33px;
+    font-weight: 550;
+    margin-left: 15px;
+}
+.logo a {
+    text-decoration: none;
+    color: black;
+}
+nav {
+    margin-right: 50px;
+}
+.navLinks { 
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0; 
+}
+.navLinks li a {
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    font-family: Inter;
+    font-weight: 500;
+    padding: 10px;
+}
+.icons img {
+    height: 35px;
+    margin-right: 45px;
+}
+.contentBanner1 {
+    height: 655px;
+    width: 100%;
+    overflow: hidden;
+}
+.contentBanner1 img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.titleBanner1 {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+    color: black;
+    font-family: Inter;
+    font-weight: 600;
+}
+.titleBanner1 h3 {
+    font-size: 45px;  
+}
+.titleBanner1 p {
+    font-size: 22px;
+    font-weight: 400;
+    margin-top: 40px;
+    color: #4A4A4A;
+}
+.discoveryBtn {
+    position: absolute;
+    top: 73%;
+    left: 10%;
+    width: 240px;
+    height: 65px;
+    border-radius: 50px;
+    padding: 10px 15px;
+    background-color: gray;
+    align-content: center;
+    display: flex;
+    justify-content: space-between;
+}
+.discoveryBtn button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+}
+.bgCircle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: white;  
+    margin-top: -2px;
+}
+.bgCircle img {
+    height: 40px;
+    margin-top: 4px;
+    margin-left: 4px;
+}
