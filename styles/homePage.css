@@ -1,119 +1,542 @@
+:root {
+    --primary: #000000;
+    --secondary: #4A4A4A;
+    --background: #CDC8C2;
+    --btn: #878C8F;
+}
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Inter;
+    font-family: Inter, sans-serif;
 }
-header{
-    justify-content: space-between;
-    display: flex;
-    align-items: center;
-    background-color: white;
-    padding: 16px 0px;
-    box-shadow: 0 5px 60px rgba(0, 0, 0, 0.50);
+@keyframes appear {
+    from {
+        opacity: 0;
+        scale: 0.5;
+    }
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+header, #discovery, #whyChooseUs, #productRange .container, #moreInfo, #aboutUs, #review{
+    animation: appear 5s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
+}
+body {
+    background-color: #F0F1F3;
+}
+
+/* icon logo */
+.logoIcon {
+    height: 80px;
+}
+.searchIcon, .profileIcon {
+    height: 32px;
+    margin-left: 30px;
+}
+
+/* header */
+header {
+    background-color: #ffff;
+    max-width: 100%;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
     position: relative;
     z-index: 1000;
 }
-.logo {
-    display: flex;
-    align-items: center;
-    margin-left: 63.5px;
+.container {
+    max-width: 1400px;
+    padding: 10px 13px;
+    margin: auto;
 }
-.logo img {
-    height: 85px;
-    margin-right: 10px;
+
+/* logo and brand */
+.logoBrand {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
 }
 .brandName {
+    color: var(--primary);
     font-family: Italiana;
-    font-size: 33px;
-    font-weight: 550;
-    margin-left: 15px;
+    font-size: 1.9rem;
+    font-weight: 300;
 }
-.logo a {
-    text-decoration: none;
-    color: black;
-}
+
+/* navigation design */
 nav {
-    margin-right: 50px;
-}
-.navLinks { 
-    list-style: none;
     display: flex;
-    gap: 20px;
-    padding: 0;
-    margin: 0; 
+    justify-content: space-between;
+    align-items: center;
 }
-.navLinks li a {
+.navList {
+    display: flex;
+    list-style: none;
+    gap: 90px;
+    padding-right: 100px
+}
+a {
     text-decoration: none;
-    font-size: 20px;
-    color: black;
-    font-family: Inter;
+}
+.navList a {
+    color: var(--primary);
+    font-size: 1.2rem;
     font-weight: 500;
-    padding: 10px;
 }
-.icons img {
-    height: 35px;
-    margin-right: 45px;
+
+/* discovery section */
+#discovery {
+    background-image: url("../images//banner/homePageBanner1.jpeg");
+    background-size: cover;
+    background-position: center;
+    min-height: 75vh;
 }
-.contentBanner1 {
-    height: 655px;
-    width: 100%;
-    overflow: hidden;
+#discovery .title {
+    font-size: 3.3rem;
+    color: #FAF9F6;
+    letter-spacing: 1px;
+    margin-top: 100px;
 }
-.contentBanner1 img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
+#discovery .subtitle {
+    font-size: 1rem;
+    color: var(--secondary);
+    letter-spacing: 1px;
+    margin-top: 20px;
+    line-height: 20px;
 }
-.titleBanner1 {
-    position: absolute;
-    top: 50%;
-    left: 20%;
-    transform: translate(-50%, -50%);
-    text-align: left;
-    color: black;
-    font-family: Inter;
-    font-weight: 600;
-}
-.titleBanner1 h3 {
-    font-size: 45px;  
-}
-.titleBanner1 p {
-    font-size: 22px;
-    font-weight: 400;
-    margin-top: 40px;
-    color: #4A4A4A;
-}
-.discoveryBtn {
-    position: absolute;
-    top: 73%;
-    left: 10%;
-    width: 240px;
-    height: 65px;
+
+/* button style */
+.btn-primary {
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
     border-radius: 50px;
+    cursor: pointer;
+    background: var(--btn);
+    color: var(--primary);
+    display: flex;
+    align-items: center;
     padding: 10px 15px;
-    background-color: gray;
-    align-content: center;
+    margin-top: 30px;
+}
+.btn-primary-background {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    margin-left: 10px;
+}
+.arrowIcon {
+    height: 30px;
+}
+/* secondary button style */
+.btn-secondary {
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    background: var(--btn);
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    padding: 16px 25px;
+}
+
+/* why choose us section */
+#whyChooseUs {
+    max-width: 100%;
+}
+#whyChooseUs .container {
     display: flex;
     justify-content: space-between;
 }
-.discoveryBtn button {
-    background-color: transparent;
-    border: none;
+#whyChooseUs .text {
+    max-width: 53vw;
+}
+#whyChooseUs .title {
+    font-size: 2.3rem;
+    margin-top: 52px;
+    letter-spacing: 1px;
+}
+#whyChooseUs .subtitle {
+    font-size: 1.1rem;
+    color: var(--secondary);
+    line-height: 30px;
+    margin-top: 28px;
+}
+#whyChooseUs .list {
+    margin-top: 25px;
+    padding: 10px;
+}
+#whyChooseUs li {
+    font-size: 1rem;
+    color: var(--secondary);
+    letter-spacing: 0.7px;
+    line-height: 30px;
+    padding: 10px;
+}
+.list .textTitle {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--primary)
+}
+.contentImage {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin: 30px 30px;
+}
+.banner2 {
+    width: 475px;
+    height: 550px;
+}
+
+/* product range section */
+#productRange {
+    max-width: 100%;
+    max-height: 70vh;
+    background-color: var(--background);
+}
+#productRange .text {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+#productRange .title {
+    font-size: 1.7rem;
+    letter-spacing: 3px;
+}
+#productRange .subtitle {
+    width: 30vw;
+    font-size: 0.8rem;
+    color: var(--secondary);
+    text-align: right;
+    letter-spacing: 1px;
+    line-height: 23px;
+}
+/* product images example */
+.productRangeContent {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    max-width: 100%;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+    gap: 50px;
+}
+.productRangeContent::-webkit-scrollbar { display: none;
+}
+/* product 1 style */
+.productContent1 {
+    position: relative;
     cursor: pointer;
+    user-select: none;
+    flex: 0 0 auto;
+}
+.productImage1 {
+    width: 350px;
+    height: 330px;
+    border-radius: 30px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.15);
+}
+.titleContent {
+    position: absolute;
+    text-align: center;
+    bottom: 0;
+    left: 0;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+.itemTitle {
+    font-size: 1rem;
+    color: #000000;
+    background-color: white;
+    padding: 12px;
+    margin: 5px;
+    border-radius: 35px;
+}
+.btnContent {
+    position: absolute;
+    text-align: center;
+    top: 0;
+    right: 0;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+.btnBackground {
+    width: 45px;
+    height: 45px;
+    background-color: #ffff;
+    border-radius: 50px;
+    border: none;
+    margin: 11px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.arrowIcon2 {
+    height: 30px;
+    rotate:calc(-30deg);
+}
+
+/* more information section */
+#moreInfo {
+    height: 75vh;
+    max-width: 100%;
+    padding: 0 240px;
+}
+#moreInfo .container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+.banner3 {
+    width: 425px;
+    height: 500px;
+    border-radius: 30px;
+}
+#moreInfo .content {
+    display: block;
+    justify-content: left;
+    width: 550px;
+    height: 285px;
+    margin-top: 80px;
+}
+#moreInfo .title {
+    font-size: 2rem;
+}
+#moreInfo .subtitle {
+    font-size: 1rem;
+    color: var(--secondary);
+    letter-spacing: 1px;
+    line-height: 23px;
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+
+/* about us section */
+#aboutUs {
+    width: 100%;
+    max-height: 85vh;
+    margin-top: 15px;
+}
+#aboutUs .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.aboutContent {
+    width: 78%;
+    max-height: 78vh;
+    background-color: var(--background);
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.25);
+}
+.textContent {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 55px;
+}
+.aboutContent .textContent .title {
+    font-size: 2.2rem;
+    font-family: Italiana;
+    letter-spacing: 1px;
+    color: black;
+
+}
+.textContent .subtitle {
+    width: 450px;
+    font-size: 1rem;
+    color: var(--secondary);
+    text-align: justify;
+    margin: 30px;
+}
+.buttonContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+.imageSlider {
+    overflow: hidden;
+    width: 78%;
+    max-height: 78vh;
+    border: 1px solid black;
+}
+.aboutUsTrial {
+    width: 100%;
+    height: 78vh;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+/* review section */
+#review {
+    max-width: 100%;
+    max-height: 70vh;
+    height: 80vh;
+    margin-top: 30px;
+    position: relative;
+}
+#review .container {
+    position: relative;
+}
+#review .title {
+    font-size: 2rem;
+    letter-spacing: 3px;
+    padding: 40px 0;
+}
+#review .subtitle {
+    font-size: 0.9rem;
+    color: var(--secondary);
+    letter-spacing: 1px;
+    line-height: 23px;
+}
+#review .totalReview {
+    font-size: 0.8rem;
+    color: var(--secondary);
+    letter-spacing: 1px;
+    line-height: 23px;
+    float: right;
+}
+#review .reviewContainer {
+    max-width: 100%;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+    gap: 40px;
+    display: flex;
+    margin-top: 35px;
+}
+.reviewContainer::-webkit-scrollbar { display: none;
+}
+.reviewContent1 {
+    width: 380px;
+    height: 200px;
+    background-color: white;
+    border-radius: 30px;
+    cursor: pointer;
+    user-select: none;
+    flex: 0 0 auto;
+}
+.nameBackground {
+    width: 35%;
+    background-color: white;
+    border: 1px solid;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+}
+.reviewContent1 .name {
+    font-size: 1rem;
+    color: var(--primary);
+    letter-spacing: 1px;
+    padding: 10px 5px;
+}
+.reviewContent1 .reviewText {
+    font-size: 0.8rem;
+    color: var(--secondary);
+    letter-spacing: 1px;
+    line-height: 23px;
+    padding: 5px 15px;
+    white-space: normal;
+    word-wrap: break-word;
+}
+.stars {
+    display: flex;
+    gap: 5px;
+    padding: 15px 20px;
+}
+.starIcon1 {
+    height: 15px;
+}
+
+/* footer section */
+#footer {
+    width: 100%;
+    height: 35vh;
+    background-color: #434343;
+}
+#footer .footerContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#footer .socials {
+    width: 50%;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 25px;
+}
+.line {
+    width: 50vw;
+    border: 0.5px solid rgb(222, 222, 222);
+}
+.socialIcons {
+    height: 20px;
+}
+#footer .textContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.textContent .title {
+    font-size: 1.5rem;
     color: white;
-    font-size: 18px;
-    font-weight: 600;
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-family: Italiana;
+    margin-top: -40px;
 }
-.bgCircle {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: white;  
-    margin-top: -2px;
+.copyright {
+    font-size: 0.7rem;
+    color: white;
+    letter-spacing: 1px;
+    margin-top: 18px;
 }
-.bgCircle img {
-    height: 40px;
-    margin-top: 4px;
-    margin-left: 4px;
+.linkSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 45px;
 }
+.linkContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.link {
+    font-size: 0.8rem;
+    color: white;
+    letter-spacing: 1px;
+    text-decoration: underline;
+}
+.barrier {
+    font-size: 1rem;
+    color: rgb(222, 222, 222);
+    letter-spacing: 1px;
+}
+
+
+

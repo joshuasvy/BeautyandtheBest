@@ -4,42 +4,345 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/homePage.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Italiana&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Italiana&display=swap" rel="stylesheet">
     <title>homePage</title>
 </head>
 <body>
+    
     <header>
-        <div class="logo">
-            <a href="#"><img src="images/svg/logoIcon.png" alt="logo"></a>
-            <a href="#"><span class="brandName">BeautyandtheBest</span></a>
-        </div>
-        <nav>
-            <ul class="navLinks">
-                <li><a href="#">New</a></li>
-                <li><a href="#">Best Seller</a></li>
-                <li><a href="#">Brands</a></li>
-            </ul>
-        </nav>
-        <div class="icons">
-            <a href="#"><img src="images/svg/searchIcon.png" alt="searchIcon"></a>
-            <a href="#"><img src="images/svg/profileIcon.png" alt="profileIcon"></a>
+        <div class="container">
+            <nav>
+                <div class="logoBrand">
+                    <a href=""><img src="images/svg/logoIcon.png" class="logoIcon"></a>
+                    <h1 class="brandName">BeautyandtheBest</h1>
+                </div>
+                <ul class="navList">
+                    <li><a href="">New</a></li>
+                    <li><a href="">Best Sellers</a></li>
+                    <li><a href="">Brands</a></li>
+                </ul>
+                <div class="icons">
+                    <a href=""><img src="images/svg/searchIcon.png" class="searchIcon"></a>
+                    <a href=""><img src="images/svg/profileIcon.png" class="profileIcon"></a>
+                </div>
+            </nav>
         </div>
     </header>
 
-    <div class="contentBanner1">
-        <img src="images/banner/homePageBanner1.jpg" alt="banner1">
-        <div class="titleBanner1">
-            <h3>Come shop now where <br>Beauty wins with<br> every Checkout!</h3>
-            <p>Revive & Thrive your skin with the help <br>of BeautyandtheBest. </p>
+    <section id="discovery">
+        <div class="container">
+            <h1 class="title">Come shop now where <br>Beauty wins with every<br> Checkout!</h1>
+            <p class="subtitle">Revive & Thrive your skin with the help of BeautyandtheBest. </p>
+            <button class="btn-primary">
+                DISCOVER MORE
+                <span class="btn-primary-background">
+                    <img src="images/svg/arrowIcon.png" class="arrowIcon">
+                </span>
+            </button>
         </div>
-    </div>
+    </section>
 
-    <div class="discoveryBtn">
-        <button>DISCOVER MORE</button>
-        <div class="bgCircle">
-            <a href="#"><img src="images/svg/arrowIcon.png" alt="arrowIcon"></a>
+    <section id="whyChooseUs">
+        <div class="container">
+            <div class="text">
+                <h1 class="title">Why Choose Us?</h1>
+                <p class="subtitle">Discover the unique features that set us apart in the world of <br>skincare.</p>
+                <ul class="list">
+                    <li><span class="textTitle">Curated Selection:</span> Our team carefully selects each product to ensure you receive only the best in skincare.</li>
+                    <li><span class="textTitle">Authenticity Guaranteed:</span> We partner directly with brands to bring you genuine products.</li>
+                    <li><span class="textTitle">Unique Deals:</span> Shop with us, and take advantage of unique deals, loyalty benefits, and special savings.</li>
+                </ul>
+            </div>
+            <div class="contentImage">
+                <img src="images/banner/homePageBanner2.png" class="banner2">
+            </div>
         </div>
-    </div>
+    </section>
 
+    <section id="productRange">
+        <div class="container">
+            <div class="text">
+                <h1 class="title">OUR PRODUCT RANGE</h1>
+                <p class="subtitle">Explore our collection of skincare essentials, thoughtfully curated to address the unique needs of every skin type and concern.</p>
+            </div>
+            <div class="productRangeContent">
+                <div class="productContent1">
+                     <img src="images/banner/facialwashandcleanser.jpg" class="productImage1">
+                    <div class="titleContent">
+                        <h2 class="itemTitle">Facial Wash & Cleanser</h2>
+                    </div>
+                    <div class="btnContent">
+                        <button class="btnBackground">
+                            <a href=""><img src="images/svg/arrowIcon.png" class="arrowIcon2"></a>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="productContent1">
+                    <img src="images/banner/moisturizersandcreams.jpg" class="productImage1">
+                    <div class="titleContent">
+                        <h2 class="itemTitle">Moisturizers and Creams</h2>
+                    </div>
+                    <div class="btnContent">
+                        <button class="btnBackground">
+                            <a href=""><img src="images/svg/arrowIcon.png" class="arrowIcon2"></a>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="productContent1">
+                    <img src="images/banner/serum.jpg" class="productImage1">
+                    <div class="titleContent">
+                        <h2 class="itemTitle">Serum</h2>
+                    </div>
+                    <div class="btnContent">
+                        <button class="btnBackground">
+                            <a href=""><img src="images/svg/arrowIcon.png" class="arrowIcon2"></a>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="productContent1">
+                    <img src="images/banner/sunscreen.jpg" class="productImage1">
+                    <div class="titleContent">
+                        <h2 class="itemTitle">Sunscreens</h2>
+                    </div>
+                    <div class="btnContent">
+                        <button class="btnBackground">
+                            <a href=""><img src="images/svg/arrowIcon.png" class="arrowIcon2"></a>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="productContent1">
+                    <img src="images/banner/toner.jpg" class="productImage1">
+                    <div class="titleContent">
+                        <h2 class="itemTitle">Toner</h2>
+                    </div>
+                    <div class="btnContent">
+                        <button class="btnBackground">
+                            <a href=""><img src="images/svg/arrowIcon.png" class="arrowIcon2"></a>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="productContent1">
+                    <img src="images/banner/others.jpg" class="productImage1">
+                    <div class="titleContent">
+                        <h2 class="itemTitle">Others</h2>
+                    </div>
+                    <div class="btnContent">
+                        <button class="btnBackground">
+                            <a href=""><img src="images/svg/arrowIcon.png" class="arrowIcon2"></a>
+                        </button>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <section id="moreInfo">
+        <div class="container">
+            <img src="images/banner/homePageBanner3.jpeg" class="banner3">
+            <div class="content">
+                <h1 class="title">A right solution for the right product</h1>
+                <p class="subtitle">Don’t have an idea or enough knowledge about the product you have your eye on? Don’t worry, we’ve got your back, our dear BaTB customers! Our team is here to provide you with all the information and support you need to make an informed decision. </p>
+                <button class="btn-primary">
+                    FOR MORE INFO
+                    <span class="btn-primary-background">
+                        <img src="images/svg/arrowIcon.png" class="arrowIcon">
+                    </span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section id="aboutUs">
+        <div class="container">
+            <div class="aboutContent">
+                <div class="textContent">
+                    <h1 class="title">What is BeautyandtheBest?</h1>
+                    <p class="subtitle">At BeautyandtheBest, we prioritize your skincare journey by providing clear and detailed information about our products and their ingredients. We focus on educating our customers about active ingredients like niacinamide and salicylic acid, ensuring you understand their benefits and safe usage.<br><br>
+                    Our mission is to simplify your shopping experience, eliminate ingredient confusion, and build trust in our products. Offering comprehensive product details and demonstrations, we aim to enhance your satisfaction and encourage repeat purchases. Join us in discovering skincare that empowers you to look and feel your best.</p>
+                    <div class="buttonContent">
+                        <button class="btn-secondary">ABOUT US</button>
+                    </div>
+                </div>
+                <img src="images/banner/aboutUs1.png" class="aboutUsTrial">
+            </div>
+        </div>
+    </section>
+
+    <section id="review">
+        <div class="container">
+            <div class="reviewText">
+                <h1 class="title">WHAT OUR CUSTOMERS SAY ABOUT US</h1>
+                <p class="subtitle">We proudly collaborate with outstanding skincare brands, both local and international, to bring you only the best.</p>
+                <p class="totalReview">Reviews (10)</p>
+            </div>
+
+            <div class="reviewContainer">
+                <div class="reviewContent1">
+                    <div class="nameBackground">
+                        <h2 class="name">Michael G.</h2>
+                    </div>
+                    <p class="reviewText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. amet, consectetur adipiscing elit.</p>
+                    <div class="stars">
+                        <img src="images/svg/starIcon1.png" class="starIcon1">
+                        <img src="images/svg/starIcon1.png" class="starIcon1">
+                        <img src="images/svg/starIcon1.png" class="starIcon1">
+                        <img src="images/svg/starIcon2.png" class="starIcon1">
+                    </div>
+                </div>
+
+                <div class="reviewContent1">
+                    <div class="nameBackground">
+                        <h2 class="name">Michael G.</h2>
+                    </div>
+                    <p class="reviewText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. amet, consectetur adipiscing elit.</p>
+                    <div class="stars">
+                        <img src="images/svg/starIcon1.png" class="starIcon1">
+                        <img src="images/svg/starIcon1.png" class="starIcon1">
+                        <img src="images/svg/starIcon1.png" class="starIcon1">
+                        <img src="images/svg/starIcon2.png" class="starIcon1">
+                    </div>
+                </div>
+
+                <div class="reviewContent1">
+                    <div class="nameBackground">
+                        <h2 class="name">Michael G.</h2>
+                    </div>
+                    <p class="reviewText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. amet, consectetur adipiscing elit.</p>
+                    <div class="stars">
+                        <img src="images/svg/starIcon1.png" class="starIcon1">
+                        <img src="images/svg/starIcon1.png" class="starIcon1">
+                        <img src="images/svg/starIcon1.png" class="starIcon1">
+                        <img src="images/svg/starIcon2.png" class="starIcon1">
+                    </div>
+                </div>
+
+                <div class="reviewContent1">
+                    <div class="nameBackground">
+                        <h2 class="name">Michael G.</h2>
+                    </div>
+                    <p class="reviewText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. amet, consectetur adipiscing elit.</p>
+                    <div class="stars">
+                        <img src="images/svg/starIcon1.png" class="starIcon1">
+                        <img src="images/svg/starIcon1.png" class="starIcon1">
+                        <img src="images/svg/starIcon1.png" class="starIcon1">
+                        <img src="images/svg/starIcon2.png" class="starIcon1">
+                    </div>
+                </div>
+
+                <div class="reviewContent1">
+                    <div class="nameBackground">
+                        <h2 class="name">Michael G.</h2>
+                    </div>
+                    <p class="reviewText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. amet, consectetur adipiscing elit.</p>
+                    <div class="stars">
+                        <img src="images/svg/starIcon1.png" class="starIcon1">
+                        <img src="images/svg/starIcon1.png" class="starIcon1">
+                        <img src="images/svg/starIcon1.png" class="starIcon1">
+                        <img src="images/svg/starIcon2.png" class="starIcon1">
+                    </div>
+                </div>
+
+                <div class="reviewContent1">
+                    <div class="nameBackground">
+                        <h2 class="name">Michael G.</h2>
+                    </div>
+                    <p class="reviewText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. amet, consectetur adipiscing elit.</p>
+                    <div class="stars">
+                        <img src="images/svg/starIcon1.png" class="starIcon1">
+                        <img src="images/svg/starIcon1.png" class="starIcon1">
+                        <img src="images/svg/starIcon1.png" class="starIcon1">
+                        <img src="images/svg/starIcon2.png" class="starIcon1">
+                    </div>
+                </div>
+
+                <div class="reviewContent1">
+                    <div class="nameBackground">
+                        <h2 class="name">Michael G.</h2>
+                    </div>
+                    <p class="reviewText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. amet, consectetur adipiscing elit.</p>
+                    <div class="stars">
+                        <img src="images/svg/starIcon1.png" class="starIcon1">
+                        <img src="images/svg/starIcon1.png" class="starIcon1">
+                        <img src="images/svg/starIcon1.png" class="starIcon1">
+                        <img src="images/svg/starIcon2.png" class="starIcon1">
+                    </div>
+                </div>
+
+                <div class="reviewContent1">
+                    <div class="nameBackground">
+                        <h2 class="name">Michael G.</h2>
+                    </div>
+                    <p class="reviewText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. amet, consectetur adipiscing elit.</p>
+                    <div class="stars">
+                        <img src="images/svg/starIcon1.png" class="starIcon1">
+                        <img src="images/svg/starIcon1.png" class="starIcon1">
+                        <img src="images/svg/starIcon1.png" class="starIcon1">
+                        <img src="images/svg/starIcon2.png" class="starIcon1">
+                    </div>
+                </div>
+
+                <div class="reviewContent1">
+                    <div class="nameBackground">
+                        <h2 class="name">Michael G.</h2>
+                    </div>
+                    <p class="reviewText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. amet, consectetur adipiscing elit.</p>
+                    <div class="stars">
+                        <img src="images/svg/starIcon1.png" class="starIcon1">
+                        <img src="images/svg/starIcon1.png" class="starIcon1">
+                        <img src="images/svg/starIcon1.png" class="starIcon1">
+                        <img src="images/svg/starIcon2.png" class="starIcon1">
+                    </div>
+                </div>
+
+                <div class="reviewContent1">
+                    <div class="nameBackground">
+                        <h2 class="name">Michael G.</h2>
+                    </div>
+                    <p class="reviewText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. amet, consectetur adipiscing elit.</p>
+                    <div class="stars">
+                        <img src="images/svg/starIcon1.png" class="starIcon1">
+                        <img src="images/svg/starIcon1.png" class="starIcon1">
+                        <img src="images/svg/starIcon1.png" class="starIcon1">
+                        <img src="images/svg/starIcon2.png" class="starIcon1">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="footer">
+        <div class="container">
+            <div class="footerContent">
+                <div class="socials">
+                    <div class="line"></div>
+                    <img src="images/svg/facebookIcon.png" class="socialIcons">
+                    <img src="images/svg/instagramIcon.png" class="socialIcons">
+                    <img src="images/svg/twitterIcon.png" class="socialIcons">
+                    <div class="line"></div>
+                </div>                
+            </div>
+            <div class="textContent">
+                <div class="title">BeautyandtheBest</div>
+                <p class="copyright">Copyright © 2023 BeautyandtheBest. All Rights Reserved.</p>
+            </div>
+            <div class="linkSection">
+                <div class="linkContent">
+                    <a href="" class="link">Privacy Policy</a>
+                    <a href="" class="barrier">|</a>
+                    <a href="" class="link">Terms & Conditions</a>
+                    <a href="" class="barrier">|</a>
+                    <a href="" class="link">FAQ</a>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    <script src="scripts/homePage.js"></script>
 </body>
 </html>
