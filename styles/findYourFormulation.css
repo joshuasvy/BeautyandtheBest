@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Inter, sans-serif;
+}
+body {
+    background-color: #F0F1F3;
+}
+
+/* icon logo */
+.logoIcon {
+    height: 80px;
+}
+.searchIcon, .profileIcon {
+    height: 32px;
+    margin-left: 30px;
+}
+
+/* header */
+header {
+    background-color: #ffff;
+    max-width: 100%;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 1000;
+}
+.container {
+    max-width: 1450px;
+    padding: 10px 13px;
+    margin: auto;
+}
+
+/* logo and brand */
+.logoBrand {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}
+.brandName {
+    color: var(--primary);
+    font-family: Italiana;
+    font-size: 1.8rem;
+    font-weight: 300;
+}
+
+/* navigation design */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navList {
+    display: flex;
+    list-style: none;
+    gap: 90px;
+}
+a {
+    text-decoration: none;
+}
+.navList a {
+    color: var(--primary);
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+#age-and-gender-section {
+    width: 100%;
+    height: 85vh;
+    display: flex;
+}
+#age-and-gender-section .container {
+    width: 90%;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.next-btn {
+    position: absolute;  
+    top: 0;
+    right: 0;
+    margin: 8px 20px;
+}
+.next-btn button {
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 8px 30px;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.age-gender-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.age-left-panel {
+    width: 650px;
+    height: 55vh;
+    border-radius: 20px;
+    background-color: #F6F6F6;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.30);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.age-panel-title {
+    margin: 20px 0;
+}
+.age-panel-title .title {
+    font-size: 2rem;
+}
+.age-button-selection {
+    width: 400px;
+    height: 20vh;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.age-button-selection button, .gender-button-selection button {
+    width: 180px;
+    height: 40px;
+    font-size: 1rem;
+    text-align: center;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.age-right-panel {
+    width: 650px;
+    height: 55vh;
+    border-radius: 20px;
+    background-color: #F6F6F6;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.30);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.gender-panel-title .title {
+    font-size: 2rem;
+}
+.gender-button-selection {
+    width: 390px;
+    height: 13vh;
+    margin: 12px 0;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
