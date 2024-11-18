@@ -344,8 +344,9 @@ a {
     margin: 10px 0;
 }
 .recommended-item-name {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     font-weight: 500;
+    margin: 0 0 10px 0;
 }
 .recommended-product-item-price {
     display: flex;
@@ -358,7 +359,7 @@ a {
 .recommended-rate {
     display: flex;
     gap: 3px;
-    margin: 0 20px;
+    margin: 12px 20px;
 }
 .recommended-rate img {
     height: 20px;
@@ -399,19 +400,19 @@ a {
 #information-section .container {
     width: 100%;
     max-height: 100vh;
-    margin-bottom: 30px;
+    margin-bottom: 60px;
     display: flex;
     justify-content: center;
     /* border: 2px solid black; */
 }
 .header-title {
-    width: 40vw;
+    width: 34vw;
     display: flex;
     justify-content: space-between;
-    /* border: 2px solid black; */
 }
 .header-title img {
-    
+    width: 85px;
+    height: 90px;
 }
 .header-title .title {
     font-size: 2rem;
