@@ -127,7 +127,7 @@ a {
     border-radius: 50px;
     cursor: pointer;
     background: var(--btn);
-    color: var(--primary);
+    color: white;
     display: flex;
     align-items: center;
     padding: 10px 15px;
