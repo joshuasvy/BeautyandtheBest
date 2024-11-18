@@ -1,0 +1,224 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Inter, sans-serif;
+}
+body {
+    background-color: #F0F1F3;
+}
+body::-webkit-scrollbar {
+    display: flex;
+    width: 10px;
+}
+body::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+body::-webkit-scrollbar-thumb {
+    background: #afafaf;
+    border-radius: 50px;
+}
+
+/* icon logo */
+.logoIcon {
+    height: 80px;
+}
+.searchIcon, .profileIcon {
+    height: 32px;
+    margin-left: 30px;
+}
+
+/* header */
+header {
+    background-color: #ffff;
+    max-width: 100%;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 1000;
+}
+.container {
+    max-width: 1450px;
+    padding: 10px 13px;
+    margin: auto;
+}
+
+/* icon logo */
+.logoIcon {
+    height: 80px;
+}
+.searchIcon, .profileIcon, .cartIcon {
+    height: 32px;
+    margin-left: 30px;
+}
+
+/* header */
+header {
+    background-color: #ffff;
+    height: 100px;
+    max-width: 100%;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 1000;
+}
+.container {
+    max-width: 1450px;
+    padding: 10px 13px;
+    margin: auto;
+}
+
+/* logo and brand */
+.logoBrand {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}
+.brandName {
+    color: var(--primary);
+    font-family: Italiana;
+    font-size: 1.7rem;
+    font-weight: 300;
+}
+
+/* navigation design */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navList {
+    display: flex;
+    list-style: none;
+    gap: 90px;
+}
+a {
+    text-decoration: none;
+}
+.navList a {
+    color: var(--primary);
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+#cart-section {
+    width: 100%;
+    height: 85vh;
+}
+.cart-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.btn-background {
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    margin-left: 10px;
+}
+.arrowIcon {
+    height: 30px;
+    transform: rotate(180deg);
+}
+.your-cart {
+    width: 20vw;
+    gap: 15px;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+}
+.your-cart h1 {
+    font-size: 2rem;
+    margin: 20px;
+}
+.cart-container {
+    width: 100%;
+    height: 65vh;
+    border-radius: 20px;
+    background-color: #D9D9D9;
+    overflow-y: scroll;
+    scroll-snap-type: x mandatory;
+}
+.cart-container::-webkit-scrollbar {
+    display: flex;
+    width: 4px;
+}
+.cart-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+.cart-container::-webkit-scrollbar-thumb {
+    background: #afafaf;
+    border-radius: 50px;
+}
+.cart-header {
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    margin: 8px 45px;
+}
+.cart-header p {
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin: 25px 40px;
+}
+.header-line {
+    display: flex;
+    justify-content: center;
+}
+.header-line p {
+    width: 85%;
+    align-self: center;
+    border: 1px solid black;
+}
+.cart-item {
+    height: 20vh;
+    margin: 20px 45px 10px 45px;
+    padding: 20px 30px 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    scroll-snap-align: start;
+}
+.cart-item img {
+    width: 65px;
+    height: 140px;
+}
+.cart-item p {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.quantity-container-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 125px;
+    height: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.30);
+}
+.adding-btn, .decreasing-btn {
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin: 0 15px;
+}
+.quantity-value {
+    font-size: 1rem;
+    display: flex;
+    padding: 0 15px;
+}
+.item-line {
+    display: flex;
+    justify-content: center;
+}
+.item-line p {
+    width: 85%;
+    align-self: center;
+    border: 1px solid black;
+}

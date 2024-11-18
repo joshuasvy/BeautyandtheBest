@@ -7,12 +7,23 @@
 body {
     background-color: #F0F1F3;
 }
+body::-webkit-scrollbar {
+    display: flex;
+    width: 10px;
+}
+body::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+body::-webkit-scrollbar-thumb {
+    background: #afafaf;
+    border-radius: 50px;
+}
 
 /* icon logo */
 .logoIcon {
     height: 80px;
 }
-.searchIcon, .profileIcon {
+.searchIcon, .profileIcon, .cartIcon {
     height: 32px;
     margin-left: 30px;
 }
@@ -20,6 +31,7 @@ body {
 /* header */
 header {
     background-color: #ffff;
+    height: 100px;
     max-width: 100%;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
     position: relative;
@@ -41,7 +53,7 @@ header {
 .brandName {
     color: var(--primary);
     font-family: Italiana;
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     font-weight: 300;
 }
 
@@ -61,7 +73,7 @@ a {
 }
 .navList a {
     color: var(--primary);
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 500;
 }
 

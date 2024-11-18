@@ -1,55 +1,33 @@
-// const productContent = document.querySelector('.product-content');
-// const productItems = document.querySelectorAll('.product-item-1');
-// const pageDots = document.querySelectorAll('.page-dot');
+    // Variables
+    const checkboxes = document.querySelectorAll('.category'); // Category checkboxes
+    const items = document.querySelectorAll('.item'); // All items
 
-// console.log('productContent:', productContent); 
-// console.log('productItems:', productItems); 
-// console.log('pageDots:', pageDots);
-
-// function updateActiveDot() {
-//     const containerCenter = productContent.scrollLeft + productContent.offsetWidth / 2;
-//     let closestIndex = 0; 
-//     let minDistance = Number.MAX_VALUE;
-
-//     productItems.forEach((item, index) => { 
-//         const itemCenter = item.offsetLeft + item.offsetWidth / 2;
-//         const distance = Math.abs(containerCenter - itemCenter); 
-//         if (distance < minDistance) { 
-//             closestIndex = index; minDistance = distance; 
-//         }
-//     });
-    
-//     pageDots.forEach(dot => dot.classList.remove('active'));
-//     pageDots[closestIndex].classList.add('active'); 
-// } 
-
-// pageDots.forEach((dot, index) => { 
-//     dot.addEventListener('click', () => { 
-//         productContent.scrollLeft = productItems[index].offsetLeft; 
-//         updateActiveDot();
-//     });
-// }); 
-
-// productContent.addEventListener('scroll', updateActiveDot);
-
-const productContent = document.querySelector('.product-content');
-const dots = document.querySelectorAll('.page-dot');
-
-dots.forEach((dot, index) => {
-    dot.addEventListener('click', () => {
-        productContent.scrollTo({
-            left: productContent.clientWidth * index,
-            behavior: 'smooth',
+    // Event listeners for checkboxes
+    document.addEventListener('DOMContentLoaded', function () {
+        checkboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', filterItems);
         });
 
-        // Update active dot
-        dots.forEach(d => d.classList.remove('active'));
-        dot.classList.add('active');
+        // Initial visibility check
+        filterItems(); // Call to display items based on initial checkbox state
     });
-});
 
-productContent.addEventListener('scroll', () => {
-    const activeIndex = Math.round(productContent.scrollLeft / productContent.clientWidth);
-    dots.forEach(dot => dot.classList.remove('active'));
-    if (dots[activeIndex]) dots[activeIndex].classList.add('active');
-});
+    // Filter functionality
+    function filterItems() {
+        const selectedCategories = Array.from(checkboxes)
+            .filter(checkbox => checkbox.checked)
+            .map(checkbox => checkbox.value);
+
+        console.log('Selected Categories:', selectedCategories); // Debugging line
+
+        // Show or hide items based on selected categories
+        items.forEach(item => {
+            const itemCategory = item.classList[1]; // Assuming the second class indicates the category
+            console.log('Item Category:', itemCategory); // Debugging line
+            if (selectedCategories.length === 0 || selectedCategories.includes(itemCategory)) {
+                item.style.display = 'block'; // Show item
+            } else {
+                item.style.display = 'none'; // Hide item
+            }
+        });
+    }
