@@ -13,7 +13,7 @@ function updateQuantity() {
 
 // Event listener for decreasing button
 decreaseBtn.addEventListener('click', function() {
-    if (quantity > 0) { // Prevent negative values
+    if (quantity > 1) { // Prevent negative values
         quantity--;
         updateQuantity();
     }
@@ -27,3 +27,4 @@ increaseBtn.addEventListener('click', function() {
 
 // Initial display
 updateQuantity();
+

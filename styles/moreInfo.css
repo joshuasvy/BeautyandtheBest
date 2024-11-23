@@ -1,0 +1,325 @@
+:root {
+    --left: #E1D4C2;
+    --right: #6E473B;
+    --border: 2px solid red;
+    --border1: 2px solid green;
+    --shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
+    --none: none;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Inter, sans-serif;
+}
+body {
+    background-color: #F0F1F3;
+}
+
+/* scroll bar design */
+body::-webkit-scrollbar {
+    display: flex;
+    width: 10px;
+}
+body::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+body::-webkit-scrollbar-thumb {
+    background: #afafaf;
+    border-radius: 50px;
+}
+
+/* icon logo */
+.logoIcon {
+    height: 80px;
+}
+.searchIcon {
+    height: 35px;
+    margin-left: 30px;
+}
+.profileIcon, .cartIcon {
+    height: 32px;
+    margin-left: 30px;
+}
+.wishlistIcon {
+    height: 28px;
+    margin-left: 30px;
+}
+
+/* header */
+header {
+    background-color: #ffff;
+    height: 100px;
+    max-width: 100%;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 1000;
+    /* border: 2px solid black; */
+}
+.container {
+    max-width: 1450px;
+    padding: 10px 13px;
+    margin: auto;
+    /* border: 1px solid black; */
+}
+
+/* logo and brand */
+.logoBrand {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    cursor: pointer;
+}
+.brandName {
+    color: var(--primary);
+    font-family: Italiana;
+    font-size: 1.7rem;
+    font-weight: 300;
+    user-select: none;
+}
+
+/* navigation design */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navList {
+    display: flex;
+    list-style: none;
+    gap: 90px;
+}
+a {
+    text-decoration: none;
+}
+.navList a {
+    color: var(--primary);
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+/* common active ingredients section */
+#active-ingredients {
+    height: 242.5vh;
+    /* border: 2px solid red; */
+}
+.active-ingredients-header {
+    height: 13vh;
+    background-color: #967C67;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.active-ingredients-header h1 {
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+    user-select: var(--none);
+}
+.ingredients-container {
+    max-height: 242vh;
+    padding: 40px 0;
+    /* border: 2px solid green; */
+}
+.ingredients-1 {
+    height: 35vh;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: var(--border); */
+}
+.ingredients-1 .panel-left-1 {
+    width: 67%;
+    height: 35vh;
+    border-radius: 10px;
+    border: 1px solid black;
+    background-color: var(--left);
+}
+.ingredients-1 .panel-right-1 {
+    width: 30%;
+    height: 35vh;
+    border-radius: 10px;
+    border: 1px solid black;
+    background-color: white;
+}
+.ingredients-2 {
+    height: 35vh;
+    margin-bottom: 30px;;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: var(--border); */
+}
+.ingredients-2 .panel-left-1 {
+    width: 30%;
+    height: 35vh;
+    border-radius: 10px;
+    border: 1px solid black;
+    background-color: white;
+}
+.ingredients-2 .panel-right-1 {
+    width: 67%;
+    height: 35vh;
+    border-radius: 10px;
+    border: 1px solid black;
+    background-color: var(--right);
+}
+.ingredients-3 {
+    height: 35vh;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: var(--border); */
+}
+.ingredients-3 .panel-left-1 {
+    width: 58%;
+    height: 35vh;
+    border-radius: 10px;
+    border: 1px solid black;
+    background-color: var(--left);
+}
+.ingredients-3 .panel-right-1 {
+    width: 39%;
+    height: 35vh;
+    border-radius: 10px;
+    border: 1px solid black;
+    background-color: white;
+}
+.ingredients-4 {
+    height: 35vh;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: var(--border); */
+}
+.ingredients-4 .panel-left-1 {
+    width: 57%;
+    height: 35vh;
+    border-radius: 10px;
+    border: 1px solid black;
+    background-color: white;
+}
+.ingredients-4 .panel-right-1 {
+    width: 40%;
+    height: 35vh;
+    border-radius: 10px;
+    border: 1px solid black;
+    background-color: var(--right);
+}
+.ingredients-5 {
+    height: 35vh;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: var(--border); */
+}
+.ingredients-5 .panel-left-1 {
+    width: 49%;
+    height: 35vh;
+    border-radius: 10px;
+    border: 1px solid black;
+    background-color: var(--left);
+}
+.ingredients-5 .panel-right-1 {
+    width: 49%;
+    height: 35vh;
+    border-radius: 10px;
+    border: 1px solid black;
+    background-color: var(--left);
+}
+.ingredients-6 {
+    height: 35vh;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: var(--border); */
+}
+.ingredients-6 .panel-left-1 {
+    width: 100%;
+    height: 35vh;
+    border-radius: 10px;
+    border: 1px solid black;
+    background-color: white;
+}
+
+/* types of moisturizer */
+#types-moisturizer {
+    height: 67vh;
+    margin-top: 83px;
+    /* border: var(--border); */
+}
+.moisturizer-header {
+    height: 13vh;
+    background-color: #967C67;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.moisturizer-header h1 {
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+    color: black;
+    user-select: var(--none);
+}
+.moisturizer-container {
+    height: 50vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: var(--border1); */
+}
+.moisturizer-container .content-1 {
+    width: 32%;
+    height: 45vh;
+    border-radius: 15px;
+    background-color: var(--left);
+    border: 1px solid rgb(73, 73, 73);
+    box-shadow: var(--shadow);
+}
+
+/* skin problems you may encounter */
+#skin-problems {
+    height: 63vh;
+    /* border: var(--border); */
+}
+.skin-problem-header {
+    height: 13vh;
+    background-color: #967C67;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.skin-problem-header h1 {
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+    user-select: var(--none);
+}
+.skin-problem-container {
+    height: 45vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    /* border: var(--border); */
+}
+.skin-problem-container .content-1 {
+    width: 49%;
+    height: 20vh;
+    border-radius: 15px;
+    background-color: var(--left);
+    border: 1px solid rgb(73, 73, 73);
+    box-shadow: var(--shadow);
+}
+.skin-problem-container .content-2 {
+    width: 49%;
+    height: 18vh;
+    border-radius: 15px;
+    background-color: var(--left);
+    border: 1px solid rgb(73, 73, 73);
+    box-shadow: var(--shadow);
+}

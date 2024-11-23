@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-in</title>
+    <link rel="stylesheet" href="styles/login.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Italiana&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css" integrity="sha512-9xKTRVabjVeZmc+GUW8GgSmcREDunMM+Dt/GrzchfN8tkwHizc5RP4Ok/MXFFy5rIjJjzhndFScTceq5e6GvVQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    
+    <header>
+        <div class="header-container">
+            <nav>
+                <div class="logoBrand">
+                    <a href="homePage.html"><img src="images/svg/logoIcon.png" class="logoIcon"></a>
+                    <h1 class="brandName">BeautyandtheBest</h1>
+                </div>
+                <ul class="navList">
+                    <li><a href="homePage.html">Home</a></li>
+                    <li><a href="productList.html">Products</a></li>
+                    <li><a href="brands.html">Brands</a></li>
+                </ul>
+                <div class="header-icons">
+                    <div class="search-container">
+                        <input type="text" placeholder="Search..">
+                        <img src="images/svg/searchIcon.png" class="searchIcon">
+                    </div>
+                    <a href=""><img src="images/svg/userIcon.png" class="profileIcon"></a>
+                    <a href="cart.html"><img src="images/svg/cartIcon.png" class="cartIcon"></a>
+                    <a href="wishlist.html"><img src="images/svg/wishlistBanner.png" class="wishlistIcon"></a>
+                </div>
+            </nav>
+        </div>
+    </header>
+     
+    <div class="container">
+        <div class="log-in">
+            <form action="" class="login">
+                <h1>Hi, Welcome back! </h1> 
+                <div class="input-b">
+                    <input type="email" placeholder="Username" required>
+                    <i class="bx bx-user"></i> 
+                </div>
+                <div class="input-b">
+                    <input type="password" name="" placeholder="Password" required>
+                    <i class='bx bx-lock'></i>
+                </div>
+
+                <div class="input-b">
+                    <button type="submit">Sign-in</button>
+                </div>
+
+                <div class="forget">
+                    <a href="">Forgot your password?</a>
+                </div>
+
+                <div class="sign-in-container">
+                    <div class="line"></div>
+                    <span class="or-text">Or sign in with</span>
+                    <div class="line"></div>
+                  </div>
+                
+                  <div class="continue-with-google"> 
+                    <button type="submit" class="google-btn">
+                        <img src="images/svg/googleIcon.png" alt="" class="google-icon">
+                        Continue with Google
+                    </button>
+                </div>
+                <p class="need">Need an account?<a href="register.html"> Sign up here.</a></p>
+            </form>
+        </div>  
+    </div>
+
+
+</body>
+</html>

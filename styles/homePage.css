@@ -5,51 +5,86 @@
     --btn: #967C67;
     --shadow: box-shadow: 0 4px 10px rgba(0, 0, 0, 0.30);
 }
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Inter, sans-serif;
 }
-@keyframes appear {
-    from {
-        opacity: 0;
-        scale: 0.5;
-    }
-    to {
-        opacity: 1;
-        scale: 1;
-    }
-}
-header, #discovery, #whyChooseUs, #productRange .container, #moreInfo, #aboutUs, #review{
-    animation: appear 5s linear;
-    animation-timeline: view();
-    animation-range: entry 0% cover 30%;
-}
 body {
     background-color: #F0F1F3;
-}
-body::-webkit-scrollbar {
+ }
+ 
+ /* icon logo */
+.icons {
+    width: 30vw;
     display: flex;
-    width: 10px;
+    justify-content: flex-end;
+    align-items: center;
 }
-body::-webkit-scrollbar-track {
-    background: #f1f1f1;
-}
-body::-webkit-scrollbar-thumb {
-    background: #afafaf;
-    border-radius: 50px;
-}
-/* icon logo */
 .logoIcon {
     height: 80px;
 }
-.searchIcon, .profileIcon, .cartIcon {
+.search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 13px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: white;
+    border: 1px solid black;
+    box-shadow: var(--shadow);
+}
+.search-container:hover input {
+    width: 200px;
+}
+.search-container input {
+    width: 32px;
+    outline: none;
+    border: none;
+    transition: 0.8s;
+    background: transparent;
+}
+.search-container input::placeholder {
+    color: #000000;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.search-container input:hover::placeholder {
+    opacity: 1;
+}
+.search-container input:focus::placeholder {
+    opacity: 1;
+}
+.searchIcon {
+    height: 30px;
+    margin-left: 30px;
+    position: absolute;
+    top: 6px;
+    right: 15px;
+}
+.profileIcon, .cartIcon {
     height: 32px;
     margin-left: 30px;
+    transition: 0.4s;
 }
-
-/* header */
+.wishlistIcon {
+    height: 28px;
+    margin-left: 30px;
+    margin-top: 5px;
+    transition: 0.4s;
+}
+  /* hover effect */
+.profileIcon:hover, .cartIcon:hover {
+    transform: translateY(-20%);
+ 
+ }
+.wishlistIcon:hover {
+    transform: translateY(-20%);
+}
+ 
+  /* header */
 header {
     background-color: #ffff;
     height: 100px;
@@ -63,26 +98,29 @@ header {
     padding: 10px 13px;
     margin: auto;
 }
-
-/* logo and brand */
+ 
+  /* logo and brand */
 .logoBrand {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 16px;
+    cursor: pointer;
 }
 .brandName {
     color: var(--primary);
     font-family: Italiana;
     font-size: 1.7rem;
-    font-weight: 300;
+    font-weight: 200;
+    user-select: none;
 }
-
-/* navigation design */
+ 
+  /* navigation design */
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 .navList {
     display: flex;
@@ -96,6 +134,10 @@ a {
     color: var(--primary);
     font-size: 1.1rem;
     font-weight: 500;
+    transition: 0.4s;
+}
+.navList a:hover {
+    transform: translateY(-20%);
 }
 
 /* discovery section */
