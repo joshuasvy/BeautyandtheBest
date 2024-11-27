@@ -34,115 +34,98 @@
         </div>
     </header>
 
-    <!-- menu -->
-     <div class="container">
-
-         <div class="menu">
-           <div class="con-btn">
-               <div class="btn">
-                   <button type="submit"><a href="userdashboard.html"><b>Profile<br>Information</b></a></button>
-               </div>
-               <div class="btn">
-                   <button type="submit"><a href="skinprofile.html"><b>Skin Profile</b></a></button>
-               </div>
-               <div class="btn">
-                   <button type="submit"><a href="accountsettings.html"><b>Account<br>Settings</b></a></button>
-               </div>
-               <div class="btn">
-                   <button type="submit"><b>Orders</b></button>
-               </div>
-               <div class="btn">
-                   <button type="submit"><b>Payments </b></button>
-               </div>
-               <div class="btn">
-                   <button type="submit"><b>Customer<br>Support</b></button>
-               </div>
-               <div class="btn">
-                   <button id="logout" type="submit"><b>Log out.</b></button>
-               </div>
-           </div>
-       </div>
-     </div>
-
-     <div class="container">
-
-     </div>
-
-    <div class="user-container">
-
-        <div class="user-info">
-            <button id="changes" type="submit">Save Changes</button>
-            <h3 id="skinprofile" >Skin profile</h3>
-            <div class="cons-drop">
-                <div class="inp">
-                <div class="selection1">
-                    <label for="fruits">Skin type</label><br>
-                    <select id="fruits" name="fruits">
-                        <option></option>
-                        <option>Oily</option>
-                        <option>Dry</option>
-                        <option>Combination</option>
-                        <option>Normal</option>
-                        <option>Sensitive</option>
-                  </select>
-                </div>
-                <div class="selection1">
-                    <label>Skin Sensitivities</label><br>
-                    <select>
-                        <option></option>
-                        <option><p>Allergies (e.g., to certain ingredients)</p></option>
-                        <option><p>Reactions to specific products</p></option>
-                        <option<p>Sensitivity to fragrances or dyes</p></option>
-                    </select>
-                </div>
-                </div>
-            <div class="inp">
-                <div class="selection2">
-                    <label>Skin Concerns:</label><br>
-                    <select>
-                      <option></option>
-                      <option ><p>Acne</p></option>
-                      <option><p>Reactions to specific products</p></option>
-                      <option><p>Aging (fine lines, wrinkles)</p></option>
-                      <option><p>Hyperpigmentation</p></option>
-                      <option><p>Redness or rosacea</p></option>
-                      <option><p>Dullness</p></option>
-                      <option><p>Dark circles</p></option>
-                      <option><p>Large pores</p></option>
-                      <option><p>Sun damage</p></option>
-                  </select>
-                </div>
-                <div class="selection2">
-                    <label>Goals</label><br>
-                    <select>
-                        <option></option>
-                        <option><p>Hydration</p></option>
-                        <option><p>Brightening</p></option>
-                        <option><p>Firmness</p></option>
-                        <option><p>Texture improvement</p></option>
-                        <option><p>Acne control</p></option>
-                    </select>
+    <section id="skin-profile">
+        <div class="container">
+            <div class="menu">
+                <div class="con-btn">
+                    <div class="btn">
+                        <button type="submit"><a href="userdashboard.html"><b>Profile<br>Information</b></a></button>
+                    </div>
+                    <div class="btn">
+                       <button type="submit"><a href="skinProfile.html"><b>Skin Profile</b></a></button>
+                    </div>
+                    <div class="btn">
+                        <button type="submit"><a href="accountSettings.html"><b>Account<br>Settings</b></a></button>
+                    </div>
+                    <div class="btn">
+                        <button type="submit"><a href="orders.html"><b>Orders</b></button></a>
+                    </div>
+                    <div class="btn">
+                       <button type="submit"><b>Payments </b></button>
+                    </div>
+                    <div class="btn">
+                        <button type="submit"><b>Customer<br>Support</b></button>
+                    </div>
+                    <div class="btn">
+                        <button id="logout" type="submit"><a href="homePage.html"><b>Log out</b></button></a>
+                    </div>
                 </div>
             </div>
+        </div>
+
+        <div class="container">
+            <div class="user-container">
+                <div class="user-info">
+                    <button class="changes" type="submit">Save Changes</button>
+                    <div class="account-header">
+                        <h1 class="skinprofile">Skin Profile</h1>
+                    </div>
+                    <div class="cons-drop">
+                        <div class="inp">
+                            <div class="selection1">
+                                <p>Skin type</p>
+                                <select>
+                                    <option></option>
+                                    <option>Oily</option>
+                                    <option>Dry</option>
+                                    <option>Combination</option>
+                                    <option>Normal</option>
+                                    <option>Sensitive</option>
+                                </select>
+                            </div>
+                            <div class="selection1">
+                                <p>Skin Sensitivities</p>
+                                <select>
+                                    <option></option>
+                                    <option><p>Allergies (e.g., to certain ingredients)</p></option>
+                                    <option><p>Reactions to specific products</p></option>
+                                    <option<p>Sensitivity to fragrances or dyes</p></option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="inp">
+                            <div class="selection2">
+                                <p>Skin Concerns:</p>
+                                <select>
+                                <option></option>
+                                <option ><p>Acne</p></option>
+                                <option><p>Reactions to specific products</p></option>
+                                <option><p>Aging (fine lines, wrinkles)</p></option>
+                                <option><p>Hyperpigmentation</p></option>
+                                <option><p>Redness or rosacea</p></option>
+                                <option><p>Dullness</p></option>
+                                <option><p>Dark circles</p></option>
+                                <option><p>Large pores</p></option>
+                                <option><p>Sun damage</p></option>
+                            </select>
+                            </div>
+                            <div class="selection2">
+                                <p>Goals</p>
+                                <select>
+                                    <option></option>
+                                    <option><p>Hydration</p></option>
+                                    <option><p>Brightening</p></option>
+                                    <option><p>Firmness</p></option>
+                                    <option><p>Texture improvement</p></option>
+                                    <option><p>Acne control</p></option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>   
             </div>
-            <div class="Routine">
-                <div class="selection3">
-                    <label>Current Skincare Routine:</label><br>
-                    <select>
-                        <option></option>
-                        <option><p>Cleanser</p></option>
-                        <option><p>Toner</p></option>
-                        <option><p>Moisturizer</p></option>
-                        <option><p>Treatments (e.g., serums, masks)</p></option>
-                        <option><p>Sunscreen</p></option>
-                        <option><p>Exfoliants</p></option>
-                    </select>
-                </div>
-    
-            </div>
-        </div>   
-    </div>
-  
+        </div>
+    </section>
 </body>
 </html>
 

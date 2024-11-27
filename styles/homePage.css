@@ -90,7 +90,8 @@ header {
     height: 100px;
     max-width: 100%;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
-    position: relative;
+    position: sticky;
+    top: 0;
     z-index: 1000;
 }
 .container {
@@ -302,6 +303,10 @@ a {
     height: 330px;
     border-radius: 30px;
     box-shadow: 0 4px 5px rgba(0, 0, 0, 0.15);
+    cursor: grab;
+}
+.productImage1:active {
+    cursor: grabbing;
 }
 .titleContent {
     position: absolute;
@@ -484,9 +489,12 @@ a {
     height: 200px;
     background-color: white;
     border-radius: 30px;
-    cursor: pointer;
+    cursor: grab;
     user-select: none;
     flex: 0 0 auto;
+}
+.reviewContent1:active {
+    cursor: grabbing;
 }
 .nameBackground {
     width: 35%;
@@ -520,6 +528,26 @@ a {
 }
 .starIcon1 {
     height: 15px;
+}
+.pagination {
+    list-style: none;
+    margin: 45px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.page-dot {
+    width: 12px;
+    height: 12px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border: 1px solid black;
+}
+.page-dot.active {
+    background-color: rgb(103, 103, 103);
 }
 
 /* footer section */
@@ -595,4 +623,32 @@ a {
 }
 
 
+@keyframes appear {
+    from {
+        opacity: 0;
+        scale: 0.4;
+    }
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
 
+#whyChooseUs, .subtitle, .productRangeContent, #moreInfo, #aboutUs, #review {
+    animation: appear 5s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 35%;
+}
+
+/* scroll bar design */
+body::-webkit-scrollbar {
+    display: flex;
+    width: 10px;
+}
+body::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+body::-webkit-scrollbar-thumb {
+    background: #afafaf;
+    border-radius: 50px;
+}

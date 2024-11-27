@@ -1,3 +1,4 @@
+// script.js
 const reviewContainer = document.querySelector('.reviewContainer');
 const reviewItems = document.querySelectorAll('.reviewContent1');
 const pageDots = document.querySelectorAll('.page-dot');
@@ -6,50 +7,113 @@ let reviewDrag = false;
 let reviewStartX;
 let reviewScrollLeft;
 
-reviewContainer.addEventListener('mousedown', (e) => {
-    reviewDrag = true;
-    reviewStartX = e.pageX - reviewContainer.offsetLeft;
-    reviewScrollLeft = reviewContainer.scrollLeft;
-});
-
-reviewContainer.addEventListener('mouseleave', () => { reviewDrag = false; });
-reviewContainer.addEventListener('mouseup', () => { reviewDrag = false; });
-
-reviewContainer.addEventListener('mousemove', (e) => {
-    if (!reviewDrag) return;
-    e.preventDefault();
-    const x = e.pageX - reviewContainer.offsetLeft;
-    const walk = (x - reviewStartX) * 3;
-    reviewContainer.scrollLeft = reviewScrollLeft - walk;
-});
-
-pageDots.forEach((dot, index) => {
-    dot.addEventListener('click', () => { 
-        pageDots.forEach(d => d.classList.remove('active'));
-        dot.classList.add('active');
-        reviewContainer.scrollLeft = reviewItems[index].offsetLeft;
+function setupDraggableScrolling(container) {
+    container.addEventListener('mousedown', (e) => {
+        reviewDrag = true;
+        reviewStartX = e.pageX - container.offsetLeft;
+        reviewScrollLeft = container.scrollLeft;
+        container.style.cursor = 'grabbing'; // Change cursor to grabbing
     });
-});
+
+    container.addEventListener('mouseleave', () => {
+        reviewDrag = false;
+        container.style.cursor = 'grab'; // Change cursor back to grab
+    });
+    
+    container.addEventListener('mouseup', () => {
+        reviewDrag = false;
+        container.style.cursor = 'grab'; // Change cursor back to grab
+    });
+
+    container.addEventListener('mousemove', (e) => {
+        if (!reviewDrag) return;
+        e.preventDefault();
+        const x = e.pageX - container.offsetLeft;
+        const walk = (x - reviewStartX) * 1; // Adjust scroll speed
+        container.scrollLeft = reviewScrollLeft - walk;
+        updatePagination(); // Update pagination on scroll
+    });
+}
+
+// Setup draggable scrolling for the review container
+setupDraggableScrolling(reviewContainer);
+
+// Pagination Logic
+const itemsPerPage = 2; // Number of items per page
+
+function updatePagination() {
+    const scrollPosition = reviewContainer.scrollLeft;
+    const itemWidth = reviewItems[0].getBoundingClientRect().width + 20; // Include margin
+    const totalItems = reviewItems.length;
+    const totalPages = Math.ceil(totalItems / itemsPerPage);
+    
+    // Calculate the index of the active pagination dot
+    const index = Math.floor(scrollPosition / (itemWidth * itemsPerPage));
+    
+    // Ensure the index is within bounds
+    const activeIndex = Math.min(index, totalPages - 1);
+    
+    // Update active pagination dot
+    pageDots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === activeIndex);
+    });
+}
+
+// Initialize pagination on load
+updatePagination();
+
 
 const productRangeContent = document.querySelector('.productRangeContent');
 
-let productDrag = false;
-let productStartX;
-let productScrollLeft;
+let isDragging = false;
+let startX;
+let scrollLeft;
 
 productRangeContent.addEventListener('mousedown', (e) => {
-    productDrag = true;
-    productStartX = e.pageX - productRangeContent.offsetLeft;
-    productScrollLeft = productRangeContent.scrollLeft;
+    isDragging = true;
+    startX = e.pageX - productRangeContent.offsetLeft; // Get the mouse position relative to the container
+    scrollLeft = productRangeContent.scrollLeft; // Get the current scroll position
+    productRangeContent.style.cursor = 'grabbing'; // Change cursor to grabbing
 });
 
-productRangeContent.addEventListener('mouseleave', () => { productDrag = false; });
-productRangeContent.addEventListener('mouseup', () => { productDrag = false; });
+productRangeContent.addEventListener('mouseleave', () => {
+    isDragging = false;
+    productRangeContent.style.cursor = 'grab'; // Change cursor back to grab
+});
+
+productRangeContent.addEventListener('mouseup', () => {
+    isDragging = false;
+    productRangeContent.style.cursor = 'grab'; // Change cursor back to grab
+});
 
 productRangeContent.addEventListener('mousemove', (e) => {
-    if (!productDrag) return;
-    e.preventDefault();
-    const x = e.pageX - productRangeContent.offsetLeft;
-    const walk = (x - productStartX) * 2;
-    productRangeContent.scrollLeft = productScrollLeft - walk;
+    if (!isDragging) return; // If not dragging, exit
+    e.preventDefault(); // Prevent default behavior (text selection)
+    const x = e.pageX - productRangeContent.offsetLeft; // Get the current mouse position
+    const walk = (x - startX) * 1; // Calculate how far the mouse has moved
+    productRangeContent.scrollLeft = scrollLeft - walk; // Scroll the container
+});
+
+const images = document.querySelectorAll('.productImage1'); // all product images
+images.forEach(image => {
+    image.addEventListener('mousedown', (e) => {
+        e.preventDefault(); // Prevent default behavior
+        let isDragging = true;
+
+        const mouseMoveHandler = (event) => {
+            if (isDragging) {
+                event.preventDefault(); // logic para hindi sya mag scroll
+                console.log("image dragged"); // working!
+            }
+        };
+
+        const mouseUpHandler = () => {
+            isDragging = false; // Stop dragging
+            document.removeEventListener('mousemove', mouseMoveHandler);
+            document.removeEventListener('mouseup', mouseUpHandler);
+        };
+
+        document.addEventListener('mousemove', mouseMoveHandler);
+        document.addEventListener('mouseup', mouseUpHandler);
+    });
 });

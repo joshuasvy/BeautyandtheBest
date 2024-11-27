@@ -1,9 +1,12 @@
 // Variables
 const checkboxes = document.querySelectorAll('.category'); // all checkbox
 const items = document.querySelectorAll('.item'); // all items
-const productBrands = document.querySelectorAll('.product-brand-1, .product-brand-2'); // all product brands or containers
+const productBrands = document.querySelectorAll('.product-brand-1, .product-brand-2');
+const productPage = document.querySelectorAll('.product-brand-1');
+const productPage2 = document.querySelectorAll('.product-brand-2');
 const productCards = document.querySelectorAll('.item'); // all items ulit pero ibang function
-const paginationDots = document.querySelectorAll('.page-dot'); // pagination
+const paginationDots = document.querySelectorAll('.page-dot'); // pagination for brand 1
+const paginationDotsBrand2 = document.querySelectorAll('.page-dot-2'); // pagination for brand 2
 
 let scrollDrag = false;
 let scrollStart;
@@ -29,7 +32,6 @@ function setupDraggableScrolling(brand) {
         brand.scrollLeft = xScrollLeft - walk;
     });
 }
-
 // Setup draggable scrolling for all product brands
 productBrands.forEach(brand => {
     setupDraggableScrolling(brand);
@@ -88,9 +90,9 @@ function filterItems() {
 }
 
 // Update pagination based on scroll position
-const itemsPerPage = 4; // render per item in max-width
+const itemsPerPage = 3.5; // render per item in max-width
 
-productBrands.forEach(brand => {
+productPage.forEach(brand => {
     brand.addEventListener('scroll', () => {
         const scrollPosition = brand.scrollLeft;
         const containerWidth = brand.clientWidth;
@@ -116,27 +118,35 @@ productBrands.forEach(brand => {
     });
 });
 
-// Star rating functionality
-function initializeStarRatings() {
-    const starContainers = document.querySelectorAll('.stars'); // Select all star containers
+const itemsPerPage2 = 3.5; // render per item in max-width
 
-    starContainers.forEach(container => {
-        const stars = container.querySelectorAll('.star'); // Select stars within the container
+productPage2.forEach(brand => {
+    brand.addEventListener('scroll', () => {
+        const scrollPosition = brand.scrollLeft;
+        const containerWidth = brand.clientWidth;
 
-        stars.forEach((star, index) => {
-            star.addEventListener('click', () => {
-                // Clear previous ratings
-                stars.forEach((s, i) => {
-                    s.classList.remove('filled'); // Remove filled class from all stars
-                    if (i <= index) {
-                        s.classList.add('filled'); // Fill stars up to the clicked star
-                    }
-                });
-                console.log(`Rating: ${index + 1}`); // Log the rating value
-            });
+        // Get the width of the first item
+        const firstItem = brand.querySelector('.item'); // Adjust the selector if necessary
+        const itemWidth = firstItem ? firstItem.getBoundingClientRect().width : 0; // Use getBoundingClientRect for accurate width
+
+        // Calculate the total number of items
+        const totalItems = brand.children.length; // Assuming all children are items
+        const totalPages = Math.ceil(totalItems / itemsPerPage2); // Calculate total pages
+
+        // Calculate the index of the active pagination dot
+        const index = Math.floor(scrollPosition / (itemWidth * itemsPerPage2));
+
+        // Ensure the index is within bounds
+        const activeIndex = Math.min(index, totalPages - 1);
+
+        // Update active pagination dot
+        paginationDotsBrand2.forEach((dot, i) => {
+            dot.classList.toggle('active', i === activeIndex);
         });
     });
-}
+});
+
+
 
 // Draggable scrolling for recommendations
 const recommendedItemsContainer = document.querySelector('.recommended-items');
@@ -164,6 +174,7 @@ recommendedItemsContainer.addEventListener('mousemove', (e) => {
     recommendedItemsContainer.scrollLeft = recommendedXScrollLeft - walk;
 });
 
+const itemPerPage = 3.5;
 // Update pagination based on scroll position
 recommendedItemsContainer.addEventListener('scroll', () => {
     const scrollPosition = recommendedItemsContainer.scrollLeft;

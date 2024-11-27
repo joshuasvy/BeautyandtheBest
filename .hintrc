@@ -29,6 +29,13 @@
           "user-select"
         ]
       }
+    ],
+    "axe/forms": [
+      "default",
+      {
+        "select-name": "off",
+        "label": "off"
+      }
     ]
   }
 }

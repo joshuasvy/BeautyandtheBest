@@ -33,7 +33,7 @@ body {
     border-radius: 20px;
     cursor: pointer;
     background-color: white;
-    border: 1px solid black;
+    border: 1.7px solid black;
     box-shadow: var(--shadow);
 }
 .search-container:hover input {
@@ -90,7 +90,8 @@ header {
     height: 100px;
     max-width: 100%;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
-    position: relative;
+    position: sticky;
+    top: 0;
     z-index: 1000;
 }
 .container {
@@ -260,7 +261,8 @@ a {
 .product-brand-2 {
     max-width: 100%;
     margin-left: 15px;
-    max-height: 65vh;
+    height: 66vh;
+    margin: -20px 0;
     position: relative;
     align-items: center;
     display: flex;
@@ -386,6 +388,39 @@ a {
     background-color: rgb(103, 103, 103);
 }
 
+/* styles for brand-2 pagination */
+.pagination {
+    list-style: none;
+    margin: 25px 0;
+    display: flex;
+    justify-content: center;
+}
+.page-dot {
+    width: 12px;
+    height: 12px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border: 1px solid black;
+}
+.page-dot.active {
+    background-color: rgb(103, 103, 103);
+}
+.page-dot-2{
+    width: 12px;
+    height: 12px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border: 1px solid black;
+}
+.page-dot-2.active {
+    background-color: rgb(103, 103, 103);
+}
 /* recommendations-section */
 #recommendation-section .container{
     display: flex;
@@ -575,4 +610,17 @@ a {
     font-size: 1rem;
     color: rgb(222, 222, 222);
     letter-spacing: 1px;
+}
+
+/* scroll bar design */
+body::-webkit-scrollbar {
+    display: flex;
+    width: 10px;
+}
+body::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+body::-webkit-scrollbar-thumb {
+    background: #afafaf;
+    border-radius: 50px;
 }

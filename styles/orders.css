@@ -83,7 +83,8 @@ header {
     height: 100px;
     max-width: 100%;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
-    position: relative;
+    position: sticky;
+    top: 0;
     z-index: 1000;
 }
 .container {
@@ -133,12 +134,13 @@ a {
     transform: translateY(-20%);
 }
 
-#skin-profile {
+/* orders section */
+#orders-section {
     width: 100%;
-    height: 85vh;
+    height: auto;
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    margin-top: 75px;
     padding: 0 70px;
     /* border: 2px solid red; */
 }
@@ -151,6 +153,9 @@ a {
     align-items: center;
     justify-content: center;
     border-radius: 28px;
+    position: fixed;
+    top: 160px;
+    left: 95px;
     border: 1px solid black;
     /* border: 1px solid red; */
 }
@@ -176,42 +181,162 @@ a {
 .user-info{
     background-color: #FFFFFF;
     width: 1080px;
-    height: 495px;
+    height: 178vh;
     border-radius: 23px;
-    position: relative;
+    margin: -25px 0 0 200px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     border: 1px solid black;
-}
-.changes{
-    width: 130px;
-    height: 50px;
-    border-radius: 8px;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    cursor: pointer;
 }
 .account-header h1 {
     font-size: 1.8rem;
-    padding: 0 50px;
+    padding: 20px 50px;
     margin: 20px 0;
 }
-
-.cons-drop{
+.inputs {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 65px;
-    /* border: 1px solid red; */
 }
-select{
-    width: 370px;
-    min-height: 45px;
-    border-radius: 10px;
+.inp {
+   margin-bottom: 30px;
+}
+.inp p {
+    padding: 10px 0;
+}
+.inp input{
+    width: 425px;
+    height: 40px;
+    padding: 0 10px;
+    border-radius: 7px;
+    border: 1px solid black;
+ }
+
+.inp1 {
+    margin-bottom: 30px;
+ }
+ .inp1 p {
+    padding: 10px 0;
+}
+.inp1 input{
+    width: 425px;
+    height: 40px;
+    padding: 0 10px;
+    border-radius: 7px;
     border: 1px solid black;
 }
-.selection1 p, .selection2 p {
-    padding: 10px 0;
+i{
+    position: fixed;
+    margin-left: -25px;
+    margin-top: 10px; 
+}
+
+/* orders container */
+.order-container {
+    width: 100%;
+    height: auto;
+    gap: 20px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 2px solid red; */
+}
+.order-header {
+    width: 95%;
+    height: 10vh;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #E1D4C2;
+    border: 1px solid black;
+}
+.order-header p {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+.order-content {
+    width: 95%;
+    height: 10vh;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #ffff;
+    border: 1px solid black;
+}
+.order-content p {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+/* review container */
+.review-header h1 {
+    font-size: 1.9rem;
+    padding: 20px 50px;
+    margin: 10px 0;
+    /* border: 1px solid black; */
+}
+.review-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    /* border: 1px solid red; */
+}
+.review-content {
+    width: 93%;
+    height: 65vh;
+    padding: 25px;
+    border-radius: 30px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid black;
+}
+.text-content {
+    width: 65%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid black; */
+}
+.text-content h1 {
+    font-size: 1.8rem;
+    padding: 0 0 25px 0;
+}
+.text-content p {
+    font-size: 1.2rem;
+    padding: 0 0 25px 0;
+    font-weight: 500;
+}
+.review-manager p {
+    font-size: 1rem;
+    padding: 25px 25px;
+    font-weight: 500;
+}
+.text-content textarea {
+    width: 90%;
+    height: 40vh;
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid black;
+    resize: none;
+}
+.image-content {
+    width: 30%;
+    height: 40vh;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.image-content img {
+    height: 250px;
 }
