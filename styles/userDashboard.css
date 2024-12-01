@@ -6,6 +6,7 @@
 }
 body {
     background-color: #F0F1F3;
+    user-select: none;
  }
  
  /* icon logo */
@@ -145,8 +146,8 @@ a {
 }
 .menu{
     background-color:#E1D4C2;
-    width: 200px;
-    height: 500px;
+    width: 180px;
+    height: 550px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -156,16 +157,16 @@ a {
     /* border: 1px solid red; */
 }
 .con-btn {
-    height: 55vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    /* border: 2px solid green; */
+    gap: 50px;
+    /* border: 1px solid green; */
 }
 .btn button{
     width: 130px;
-    height: 40px;
+    height: 45px;
     border-radius: 8px;
     cursor: pointer;
 }
@@ -178,18 +179,35 @@ a {
 .user-info{
     background-color: #FFFFFF;
     width: 1080px;
-    height: 495px;
+    height: 550px;
     border-radius: 23px;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     border: 1px solid black;
+    padding: 10px 0;
+}
+.account-header {
+    margin: 0 0 25px 0;
+    padding: 0 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* border: 1px solid red; */
 }
 .account-header h1 {
     font-size: 1.8rem;
-    padding: 0 50px;
-    margin: 20px 0;
+}
+.account-header button {
+    background-color: white;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.15);
+    padding: 15px 35px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.account-header button:hover {
+    background-color: #E1D4C2;
 }
 .inputs {
     display: flex;
@@ -209,11 +227,10 @@ a {
     padding: 0 10px;
     border-radius: 7px;
     border: 1px solid black;
- }
-
+}
 .inp1 {
     margin-bottom: 30px;
- }
+}
  .inp1 p {
     padding: 10px 0;
 }
@@ -230,3 +247,103 @@ i{
     margin-top: 10px; 
 }
 
+.edit {
+    width: 130px;
+    padding: 15px 46px;
+    margin: 10px 45px;
+    border-radius: 8px;
+    background-color: white;
+    float: right;
+    cursor: pointer;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.15);
+}
+.edit:hover {
+    background-color: #E1D4C2;
+}
+.modal-container {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    height: 500px;
+    margin-top: 170px;
+    border-radius: 10px;
+    /* border: 1px solid red; */
+}
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.close:hover, .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+.inputs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 65px;
+}
+.inp {
+    margin-bottom: 30px;
+ }
+.inp p {
+    padding: 10px 0;
+}
+.inp input{
+    width: 425px;
+    height: 40px;
+    padding: 0 10px;
+    border-radius: 7px;
+    border: 1px solid black;
+}
+ 
+.inp1 {
+    margin-bottom: 30px;
+}
+.inp1 p {
+    padding: 10px 0;
+}
+.inp1 input{
+    width: 425px;
+    height: 40px;
+    padding: 0 10px;
+    border-radius: 7px;
+    border: 1px solid black;
+}
+.save-btn {
+    margin: 15px;
+    float: right;
+    padding: 15px 45px;
+    border-radius: 8px;
+    background-color: white;
+    cursor: pointer;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.15);
+}
+.save-btn:hover {
+    background-color: #E1D4C2;
+}

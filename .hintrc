@@ -26,7 +26,10 @@
       "default",
       {
         "ignore": [
-          "user-select"
+          "user-select",
+          "animation-range",
+          "animation-timeline",
+          "animation-timeline: view()"
         ]
       }
     ],
@@ -36,6 +39,13 @@
         "select-name": "off",
         "label": "off"
       }
-    ]
+    ],
+    "axe/structure": [
+      "default",
+      {
+        "listitem": "off"
+      }
+    ],
+    "no-inline-styles": "off"
   }
 }

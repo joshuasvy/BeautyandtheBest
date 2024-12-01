@@ -164,7 +164,23 @@ a {
     align-items: center;
     justify-content: center;
  }
-.log-in h1{
+.welcome {
+   width: 30vw;
+   margin-left: -50px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.welcome button {
+    background-color: transparent;
+    border: none;
+}
+.backIcon{
+   height: 30px;
+   margin: 0 40px 0 0;
+   cursor: pointer;
+}
+.welcome h1{
     font-size: 2.3rem;
     margin-bottom: 25px;
     align-items: center;

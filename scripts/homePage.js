@@ -1,4 +1,3 @@
-// script.js
 const reviewContainer = document.querySelector('.reviewContainer');
 const reviewItems = document.querySelectorAll('.reviewContent1');
 const pageDots = document.querySelectorAll('.page-dot');

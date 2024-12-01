@@ -162,7 +162,7 @@ a {
 }
 .category-right-panel {
     width: 100%;
-    height: 155vh;
+    height: 1135px;
     overflow: hidden;
 }
 
@@ -229,7 +229,7 @@ a {
     font-size: 2.2rem;
     font-weight: 700;
     letter-spacing: 1px;
-    margin: 20px 30px;
+    margin: 20px 0 60px 30px;
     user-select: none;
 }
 .brand-title-2 {
@@ -245,9 +245,9 @@ a {
 .product-brand-1 {
     max-width: 100%;
     margin-left: 15px;
-    height: 66vh;
-    margin: -20px 0;
-    position: relative;
+    height: 132vh;
+    padding: 30px 0;
+    margin: -50px 0;
     align-items: center;
     display: flex;
     white-space: nowrap;
@@ -261,27 +261,28 @@ a {
 .product-brand-2 {
     max-width: 100%;
     margin-left: 15px;
-    height: 66vh;
+    height: 132vh;
+    padding: 30px 0;
     margin: -20px 0;
-    position: relative;
+    /* position: relative; */
     align-items: center;
     display: flex;
     white-space: nowrap;
     overflow-x: auto;
     overflow-y: hidden;
+    /* border: 1px solid black; */
 }
 .product-brand-2::-webkit-scrollbar {
     display: none;
 }
 .item {
     width: 330px;
-    height: 57.5vh;
+    height: 420px;
     margin: 15px;
     border-radius: 20px;
     background-color: #ffffff;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.30);
     flex: 0 0 auto;
-    display: none;
     user-select: none;
     cursor: pointer;
 }
@@ -327,7 +328,7 @@ a {
     cursor: pointer;
 }
 .item-btn {
-    margin-right: 15px;
+    /* margin-right: 15px; */
 }
 .view-more-btn {
     font-size: 1rem;
@@ -355,9 +356,9 @@ a {
     height: 25px;
     transform: rotate(-30deg);
 }
-.pagination {
+.pagination-1 {
     list-style: none;
-    margin: 25px 0;
+    margin: 55px 0 0 0;
     display: flex;
     justify-content: center;
 }
@@ -449,7 +450,7 @@ a {
 }
 .recommended-item-1 {
     width: 300px;
-    height: 53vh;
+    height: 388px;
     margin: 20px;
     border-radius: 20px;
     background-color: #F8F8F8;
@@ -457,6 +458,7 @@ a {
     flex: 0 0 auto;
     user-select: none;
     cursor: pointer;
+    border: 1px solid red;
 }
 
 /* recommended-product-item */

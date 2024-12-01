@@ -1,83 +1,33 @@
 let quantity = 1;
 
-const decreasingBtn = document.querySelector('.decreasing-btn');
-const increasingBtn = document.querySelector('.adding-btn');
-const quantityValue = document.querySelector('.quantity-value');
-const addToCartBtn = document.getElementById('addToCartBtn');
-const buyNowBtn = document.getElementById('buyNowBtn');
-const modal = document.querySelector(".modal-container");
-const buyBtn = document.querySelector(".buy-now-btn");
-const closeBtn = document.querySelector(".close");
-const saveBtn = document.querySelector(".save-btn");
-
-if (decreasingBtn && quantityValue) {
-    decreasingBtn.addEventListener('click', () => {
-        if (quantity > 1) {
-            quantity--;
-            quantityValue.innerText = quantity;
-        }
-    });
-}
-
-if (increasingBtn && quantityValue) {
-    increasingBtn.addEventListener('click', () => {
-        quantity++;
-        quantityValue.innerText = quantity;
-    });
-}
-
-// Ensure modal is hidden initially
-window.addEventListener("load", () => {
-    if (modal) {
-        modal.style.display = "none";
+document.querySelector('.decreasing-btn').addEventListener('click', () => {
+    if (quantity > 1) {
+        quantity--;
+        document.querySelector('.quantity-value').innerText = quantity;
     }
 });
 
-// Show modal and disable background scrolling
-if (buyBtn) {
-    buyBtn.addEventListener("click", () => {
-        modal.style.display = "block";
-        document.body.classList.add("no-scroll");
-    });
-}
-
-// Hide modal and enable background scrolling
-if (closeBtn) {
-    closeBtn.addEventListener("click", () => {
-        modal.style.display = "none";
-        document.body.classList.remove("no-scroll");
-    });
-}
-
-if (saveBtn) {
-    saveBtn.addEventListener("click", (event) => {
-        event.preventDefault(); // Prevent form submission
-        modal.style.display = "none";
-        document.body.classList.remove("no-scroll");
-    });
-}
-
-// Hide modal and enable background scrolling when clicking outside the modal
-window.addEventListener("click", (event) => {
-    if (event.target === modal) {
-        modal.style.display = "none";
-        document.body.classList.remove("no-scroll");
-    }
+document.querySelector('.adding-btn').addEventListener('click', () => {
+    quantity++;
+    document.querySelector('.quantity-value').innerText = quantity;
 });
 
-if (addToCartBtn) {
-    addToCartBtn.addEventListener('click', () => {
-        const item = {
-            name: 'Gentle Brightening Cleanser',
-            description: 'The Radiance Boost Serum, featuring key ingredients like Vitamin C, turmeric, niacinamide, olive leaf extract, and tamarind, brightens skin tone, hydrates, reduces fine lines, improves texture, protects against environmental stressors, and soothes irritation for a youthful and radiant complexion.',
-            price: 199,
-            image: 'images/product-items/facial-wash/facial-cleanser-1.png',
-            quantity: quantity
+document.getElementById('addToCartBtn').addEventListener('click', () => {
+    const item = {
+        name: 'Gentle Salicylic Acid Cleanser',
+        description: 'The Gentle Salicylic Acid Cleanser from Soul Apothecary is designed for those with acne-prone or oily skin. This effective yet gentle formula features salicylic acid to help unclog pores, reduce breakouts, and prevent future blemishes. Its soothing ingredients ensure that the skin remains calm and hydrated, making it suitable for daily use without irritation.',
+        price: 199,
+        image: 'images/product-items/facial-wash/facial-cleanser-4.png',
+        quantity: quantity
         };
         addItemToCart(item);
         alert('Item added to cart!');
-    });
-}
+});
+
+document.getElementById('buyNowBtn').addEventListener('click', () => {
+    // Implement Buy Now functionality here
+    alert('Buy Now functionality not implemented yet!');
+});
 
 function addItemToCart(item) {
     let cartData = JSON.parse(localStorage.getItem('cartData')) || [];
@@ -85,12 +35,13 @@ function addItemToCart(item) {
     localStorage.setItem('cartData', JSON.stringify(cartData));
 }
 
-// Recommended items functionality
+// recommended items functionality
 const recommendedItems = document.querySelectorAll('.recommended-items');
 
 let scrollDrag = false;
 let scrollStart;
 let xScrollLeft;
+let filteredItems = Array.from(recommendedItems);
 
 function setupDraggableScrolling(brand) {
     brand.addEventListener('mousedown', (e) => {
@@ -110,7 +61,7 @@ function setupDraggableScrolling(brand) {
         brand.scrollLeft = xScrollLeft - walk;
     });
 }
-
+// Setup draggable scrolling for all product brands
 recommendedItems.forEach(brand => {
     setupDraggableScrolling(brand);
 });
@@ -124,7 +75,7 @@ images.forEach(image => {
 
         const mouseMoveHandler = (event) => {
             if (isDragging) {
-                event.preventDefault();
+                event.preventDefault(); // logic para hindi sya mag scroll
                 console.log("image dragged"); // working!
             }
         };
@@ -143,7 +94,6 @@ images.forEach(image => {
 // Pagination functionality
 const paginationPage = document.querySelectorAll('.recommended-items');
 const paginationDots = document.querySelectorAll('.page-dot');
-const recommendedItemsContainer = document.querySelector('.recommended-items-container');
 
 const itemsPerPage = 2.5;
 
@@ -153,12 +103,12 @@ paginationPage.forEach(brand => {
         const containerWidth = brand.clientWidth;
 
         // Get the width of the first item
-        const firstItem = brand.querySelector('.recommended-item-1');
-        const itemWidth = firstItem ? firstItem.getBoundingClientRect().width : 0;
+        const firstItem = brand.querySelector('.recommended-item-1'); // Adjust the selector if necessary
+        const itemWidth = firstItem ? firstItem.getBoundingClientRect().width : 0; // Use getBoundingClientRect for accurate width
 
         // Calculate the total number of items
-        const totalItems = brand.children.length;
-        const totalPages = Math.ceil(totalItems / itemsPerPage);
+        const totalItems = brand.children.length; // Assuming all children are items
+        const totalPages = Math.ceil(totalItems / itemsPerPage); // Calculate total pages
 
         // Calculate the index of the active pagination dot
         const index = Math.floor(scrollPosition / (itemWidth * itemsPerPage));
@@ -183,4 +133,4 @@ paginationDots.forEach((dot, i) => {
             left: scrollToPosition,
         });
     });
-});
+}); 

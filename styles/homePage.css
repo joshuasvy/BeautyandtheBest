@@ -33,7 +33,7 @@ body {
     border-radius: 20px;
     cursor: pointer;
     background-color: white;
-    border: 1px solid black;
+    border: 1.7px solid black;
     box-shadow: var(--shadow);
 }
 .search-container:hover input {
@@ -478,6 +478,7 @@ a {
     overflow-x: auto;
     scroll-behavior: smooth;
     white-space: nowrap;
+    padding: 12px 0;
     gap: 40px;
     display: flex;
     margin-top: 35px;
@@ -485,13 +486,15 @@ a {
 .reviewContainer::-webkit-scrollbar { display: none;
 }
 .reviewContent1 {
-    width: 380px;
-    height: 200px;
+    width: 400px;
+    height: 220px;
+    padding: 0 10px;
     background-color: white;
     border-radius: 30px;
     cursor: grab;
     user-select: none;
     flex: 0 0 auto;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.15);
 }
 .reviewContent1:active {
     cursor: grabbing;
@@ -652,3 +655,5 @@ body::-webkit-scrollbar-thumb {
     background: #afafaf;
     border-radius: 50px;
 }
+
+/* responsiveness */
