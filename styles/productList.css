@@ -458,7 +458,7 @@ a {
     flex: 0 0 auto;
     user-select: none;
     cursor: pointer;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 /* recommended-product-item */
